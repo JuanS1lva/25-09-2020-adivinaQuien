@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <title>Tareas</title>
+</head>
+<body class="bg-secondary p-3">
+  <div class="row">
+    <div class="col-6">
+      <h1 class="text-white display-3 pl-5">
+        Adivina Quien!
+      </h1>
+    </div>
+    <div class="col-2">
+      <button onclick="perfiles()" type="button" class="btn btn-light p-4 container" data-toggle="modal" >Perfiles</button>
+    </div>
+    <div class="col-2">
+      <button onclick="tablaPuntaje()" type="button" class="btn btn-light p-4 container" data-toggle="modal" data-target="#alerta">Puntajes</button>
+    </div>
+    <div class="col-2">
+      <button onclick="salir()" type="button" class="btn btn-light p-4 container" data-toggle="modal" data-target="#alerta">Salir</button>
+    </div>
+  </div>
+  
+  <div class="container bg-dark p-3" id="contenedor">
+    <div class="row">
+      <div class="col-4">
+        <div class="row justify-content-center">
+          <img class="p-3" src="https://www.flaticon.es/svg/static/icons/svg/3532/3532370.svg" alt="" style="height: 300px; width: 300px;">
+        <div class="col-12">
+          <button onclick="" type="button" class="btn btn-light p-4 container" data-toggle="modal" data-target="#exampleModalCenter" id="btn-juan">¿Quien es?</button>
+          
+          <!-- Modal -->
+          <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalCenterTitle">¿Quien soy yo?</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body row justify-content-center">
+                  <img class="p-3" src="../includes/images/WhatsApp Image 2020-09-25 at 10.00.37 AM.jpeg" alt="" style="height: 300px; width: 250px;">
+                  <br>
+                  <input type="text" class="form-control col-8" id="nombre1" placeholder="Ej: Carlos Perez">
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="Juan()">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="row justify-content-center">
+          <img class="p-3" src="https://www.flaticon.es/svg/static/icons/svg/3532/3532391.svg" alt="" style="height: 300px; width: 300px;">
+            <div class="col-12">
+              <button onclick="" type="button" class="btn btn-light p-4 container" data-toggle="modal" data-target="#exampleModalCenter2" id="btn-elias" >¿Quien es?</button>
+              
+              <!-- Modal -->
+              <div class="modal fade" id="exampleModalCenter2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalCenterTitle">¿Quien soy yo?</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body row justify-content-center">
+                      <img class="p-3" src="../includes/images/8390aabc-93bf-4a4e-8b14-53ce70e1cfd0.jpeg" alt="" style="height: 300px; width: 300px;">
+                      <br>
+                      <input type="text" class="form-control col-8" id="nombre2" placeholder="Ej: Carlos Perez">
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="Elias()">Close</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="row justify-content-center">
+          <img class="p-3" src="https://www.flaticon.es/svg/static/icons/svg/3532/3532563.svg" alt="" style="height: 300px; width: 300px;"><div class="col-12">
+            <div class="col-12">
+              <button onclick="" type="button" class="btn btn-light p-4 container" data-toggle="modal" data-target="#exampleModalCenter3" id="btn-ale">¿Quien es?</button>
+              
+              <!-- Modal -->
+              <div class="modal fade" id="exampleModalCenter3" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalCenterTitle">¿Quien soy yo?</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body row justify-content-center">
+                      <img class="p-3" src="../includes/images/WhatsApp Image 2020-09-25 at 9.58.15 AM.jpeg" alt="" style="height: 300px; width: 300px;">
+                      <br>
+                      <input type="text" class="form-control col-8" id="nombre3" placeholder="Ej: Carlos Perez">
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="Ale()">Close</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+     <!--  <div class="col-4">
+        <h2 class="col-12">
+          Puntos
+        </h2>
+        <div class="col-12">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col">Tareas por realizar</th>
+              </tr>
+            </thead>
+            <tbody id="contenidoTabla">
+              
+            </tbody>
+          </table>
+        </div>
+      </div> -->
+    </div>
+  </div>
+  <br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="modal fade" id="alerta" tabindex="-1" role="dialog" aria-labelledby="alerta" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Alerta!</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+            </div>
+            <div class="modal-body" id="mensaje-modal">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Aceptar</button>
+            </div>
+        </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js " integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj " crossorigin="anonymous "></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js " integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo " crossorigin="anonymous "></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js " integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI " crossorigin="anonymous "></script>
+  <script src="../js/moment-with-locales.min.js"></script> 
+  <script src="../js/jugar.js"></script>
+  <script src="../js/script.js"></script>
+</body>
+</html>
