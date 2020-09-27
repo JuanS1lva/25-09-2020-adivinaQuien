@@ -21,11 +21,11 @@ const Juan = ()=>{
   const diferencia = moment.duration(actual.diff(inicio)).asMinutes()
   if(diferencia < 2){
     if(juanito.value=="Juan Silva"){
-      alerta.innerHTML = "¡Muy Bien!"
+      alerta.innerHTML = "¡Muy Bien! Acertaste "
       $('#alerta').modal('show')
       points++
     }else{
-      alerta.innerHTML = "¡Error!"
+      alerta.innerHTML = "¡Has Fallado!"
       $('#alerta').modal('show')
       points--
     }
@@ -35,7 +35,7 @@ const Juan = ()=>{
       finDelJuego();
     }
   }else{
-    alerta.innerHTML = "¡El tiempo se agotó :C!"
+    alerta.innerHTML = "¡El tiempo se agotó :C! "
       $('#alerta').modal('show')
       finDelJuego();
   }
@@ -48,11 +48,11 @@ const Elias = ()=>{
   const diferencia = moment.duration(actual.diff(inicio)).asMinutes()
   if(diferencia < 2 && contador < 3){
     if(elias.value=="Elias Pretel"){
-      alerta.innerHTML = "¡Muy Bien!"
+      alerta.innerHTML = "¡Muy Bien! Acertaste "
       $('#alerta').modal('show')
       points++
     }else{
-      alerta.innerHTML = "¡Error!"
+      alerta.innerHTML = "¡Has Fallado!"
       $('#alerta').modal('show')
       points--
     }
@@ -62,7 +62,7 @@ const Elias = ()=>{
       finDelJuego();
     }
   }else{
-    alerta.innerHTML = "¡El tiempo se agotó :C!"
+    alerta.innerHTML = "¡El tiempo se agotó :C! "
       $('#alerta').modal('show')
       finDelJuego();
   }
@@ -76,11 +76,11 @@ const Ale = ()=>{
   const diferencia = moment.duration(actual.diff(inicio)).asMinutes()
   if(diferencia < 2 && contador < 3){
     if(ale.value=="Alejandra Rodriguez"){
-      alerta.innerHTML = "¡Muy Bien!"
+      alerta.innerHTML = "¡Muy Bien! Acertaste "
       $('#alerta').modal('show')
       points++
     }else{
-      alerta.innerHTML = "¡Error!"
+      alerta.innerHTML = "¡Has Fallado!"
       $('#alerta').modal('show')
       points--
     }
@@ -90,7 +90,7 @@ const Ale = ()=>{
       finDelJuego();
     }
   }else{
-    alerta.innerHTML = "¡El tiempo se agotó :C!"
+    alerta.innerHTML = "¡El tiempo se agotó :C! "
       $('#alerta').modal('show')
       finDelJuego();
   }
@@ -105,10 +105,10 @@ const finDelJuego = () =>{
     }
   }
   localStorage.setItem("puntaje", JSON.stringify(puntos))
-  alerta.innerHTML = "Fin del Juego, tu puntaje es: "+points+ " puntos!"
+  alerta.innerHTML += "Fin del Juego, tu puntaje es: "+points+ " puntos!"
   $('#alerta').modal('show')
 
-  let mensaje = "Tabla de Puntajes: <br>"
+  //let mensaje = ''
   for (const key in puntos) {
     mensaje+= key + " : "+puntos[key].puntaje+" puntos <br>"
   } 
@@ -117,7 +117,7 @@ const finDelJuego = () =>{
 }
 
 const tablaPuntaje = () =>{
-  let mensaje = "Tabla de Puntajes: <br>"
+  let mensaje = ''
   for (const key in puntos) {
     mensaje+= key + " : "+puntos[key].puntaje+" puntos <br>"
   } 
@@ -150,8 +150,6 @@ caja.addEventListener("click",(e)=>{
   teclado.value=temp;
 }) */
 
-
-
 const tabla = document.getElementById("contenidoTabla")
 const enTabla = () => {
   tabla.innerHTML=tabla.innerHTML+`
@@ -159,5 +157,4 @@ const enTabla = () => {
       <td>${teclado.value}</td>
     </tr>
   `
-
 }

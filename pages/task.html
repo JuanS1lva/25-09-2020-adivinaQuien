@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,25 +8,25 @@
 </head>
 <body class="bg-secondary p-3">
   <div class="row">
-    <div class="col-6">
-      <h1 class="text-white display-3 pl-5">
+    <div class="col-sm-12 col-md-6 mb-2">
+      <h1 class="text-white display-3 text-center">
         Adivina Quien!
       </h1>
     </div>
-    <div class="col-2">
-      <button onclick="perfiles()" type="button" class="btn btn-light p-4 container" data-toggle="modal" >Perfiles</button>
+    <div class="col-sm-12 col-md-2 mb-2">
+      <button onclick="perfiles()" type="button" class="btn btn-light p-4 container border border-dark" data-toggle="modal" >Perfiles</button>
     </div>
-    <div class="col-2">
-      <button onclick="tablaPuntaje()" type="button" class="btn btn-light p-4 container" data-toggle="modal" data-target="#alerta">Puntajes</button>
+    <div class="col-sm-12 col-md-2 mb-2">
+      <button onclick="tablaPuntaje()" type="button" class="btn btn-light p-4 container border border-dark" data-toggle="modal" data-target="#alerta">Puntajes</button>
     </div>
-    <div class="col-2">
-      <button onclick="salir()" type="button" class="btn btn-light p-4 container" data-toggle="modal" data-target="#alerta">Salir</button>
+    <div class="col-sm-12 col-md-2 mb-2">
+      <button onclick="salir()" type="button" class="btn btn-light p-4 container border border-dark" data-toggle="modal" data-target="#alerta">Salir</button>
     </div>
   </div>
   
-  <div class="container bg-dark p-3" id="contenedor">
+  <div class="container border rounded bg-dark p-3 my-3" id="contenedor">
     <div class="row">
-      <div class="col-4">
+      <div class="col-sm-12 col-md-4">
         <div class="row justify-content-center">
           <img class="p-3" src="https://www.flaticon.es/svg/static/icons/svg/3532/3532370.svg" alt="" style="height: 300px; width: 300px;">
         <div class="col-12">
@@ -48,7 +48,7 @@
                   <input type="text" class="form-control col-8" id="nombre1" placeholder="Ej: Carlos Perez">
                 </div>
                 <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="Juan()">Close</button>
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="Juan()">Validar</button>
                 </div>
               </div>
             </div>
@@ -56,7 +56,7 @@
         </div>
         </div>
       </div>
-      <div class="col-4">
+      <div class="col-sm-12 col-md-4">
         <div class="row justify-content-center">
           <img class="p-3" src="https://www.flaticon.es/svg/static/icons/svg/3532/3532391.svg" alt="" style="height: 300px; width: 300px;">
             <div class="col-12">
@@ -78,7 +78,7 @@
                       <input type="text" class="form-control col-8" id="nombre2" placeholder="Ej: Carlos Perez">
                     </div>
                     <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="Elias()">Close</button>
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="Elias()">Validar</button>
                     </div>
                   </div>
                 </div>
@@ -86,7 +86,7 @@
             </div>
         </div>
       </div>
-      <div class="col-4">
+      <div class="col-sm-12 col-md-4">
         <div class="row justify-content-center">
           <img class="p-3" src="https://www.flaticon.es/svg/static/icons/svg/3532/3532563.svg" alt="" style="height: 300px; width: 300px;"><div class="col-12">
             <div class="col-12">
@@ -108,7 +108,7 @@
                       <input type="text" class="form-control col-8" id="nombre3" placeholder="Ej: Carlos Perez">
                     </div>
                     <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="Ale()">Close</button>
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="Ale()">Validar</button>
                     </div>
                   </div>
                 </div>
@@ -138,32 +138,19 @@
   </div>
   <br>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
   <div class="modal fade" id="alerta" tabindex="-1" role="dialog" aria-labelledby="alerta" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLongTitle">Alerta!</h5>
+                <h5 class="modal-title" id="exampleModalLongTitle">Tabla de Puntajes!</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
+                  <span aria-hidden="true">&times;</span>
+                </button>
             </div>
             <div class="modal-body" id="mensaje-modal">
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-primary" data-dismiss="modal">Aceptar</button>
+                <button type="button" class="btn btn-dark" data-dismiss="modal">Cerrar</button>
             </div>
         </div>
     </div>
